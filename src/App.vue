@@ -13,7 +13,7 @@
 
 <template>
   <h1>
-    Hello world!
+    Boolfolio
   </h1>
   <AppMain />
 </template>
