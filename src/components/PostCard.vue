@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store';
 
 export default {
     props: {
@@ -6,7 +7,7 @@ export default {
     },
     data() {
         return {
-            baseUrl: 'http://127.0.0.1:8000',
+            store,
         };
     },
     computed: {
@@ -22,7 +23,7 @@ export default {
 
 <template>
     <div class="card p-1 h-100">
-        <img v-if="post.cover_image" :src="`${baseUrl}/storage/${post.cover_image}`" class="card-img-top ms_image" alt="">
+        <img v-if="post.cover_image" :src="`${store.baseUrl}/storage/${post.cover_image}`" class="card-img-top ms_image" alt="">
         <p class="text-center text-secondary py-5" v-if="!post.cover_image">Nessuna <br> immagine <br> trovata</p>
         <div class="card-body">
             <h4 class="card-title fw-bold mb-2">{{ post.titolo }}</h4>
