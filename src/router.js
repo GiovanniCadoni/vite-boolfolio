@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import AboutPage from "./pages/AboutPage.vue";
+import SinglePost from "./pages/SinglePost.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,6 +17,11 @@ const router = createRouter({
             name: 'about',
             component: AboutPage,
         },
+        {
+            path: "/post/:slug",
+            name: 'single-post',
+            component: SinglePost,
+        }
     ],
 });
 

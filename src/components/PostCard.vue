@@ -31,6 +31,7 @@ export default {
             <p class="card-text"> <span class="fw-bold">Categoria:</span> {{ post.type ? post.type.nome : 'non assegnata' }}
             </p>
             <p class="card-text"> <span class="fw-bold">Contenuto:</span> <br> {{ truncateText }}</p>
+            <router-link :to="{name: 'single-post', params: {slug: post.slug}}" class="btn btn-primary">Dettagli</router-link>
         </div>
     </div>
 </template>
